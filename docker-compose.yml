@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  host1:
+    image: alpine
+    container_name: host1
+    hostname: host1
+    networks:
+      my_network:
+    command: ["tail", "-f", "/dev/null"]
+    privileged: true
+
+  host2:
+    image: alpine
+    container_name: host2
+    hostname: host2
+    networks:
+      my_network:
+    command: ["tail", "-f", "/dev/null"]
+    privileged: true
+
+  host3:
+    image: alpine
+    container_name: host3
+    hostname: host3
+    networks:
+      my_network:
+    command: ["tail", "-f", "/dev/null"]
+    privileged: true
+
+  host4:
+    image: alpine
+    container_name: host4
+    hostname: host4
+    networks:
+      my_network:
+    command: ["tail", "-f", "/dev/null"]
+    privileged: true
+
+networks:
+  my_network:
