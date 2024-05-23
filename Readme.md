@@ -51,9 +51,7 @@ we can use our script now
 you will get your desired output 
 
 _________________________________________________________________________________________________________________________
-=================================================
 SETTING UP ENVIRONMENT FOR INTERNAL HOST TESING :
-=================================================
 
 # just add firewall rules using UFW on the local host and try the script.
 # commands:
