@@ -21,18 +21,28 @@ copy that key and store it safely.
 ## On all host containers execute these commands.
 
 `apk add openssh-server`
+
 `apk add openssh-client`
+
 `echo "Port 22" > /etc/ssh/sshd_config`
+
 `echo "PermitRootLogin yes" >> /etc/ssh/sshd_config`
+
 `echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config`
+
 `ssh-keygen -A`
+
 `mkdir -p ~/.ssh`
+
 `echo "<ssh key from host>" >> ~/.ssh/authorized_keys`
 
 ## replace <ssh key from host> with the key you saved earlier.
 `chmod 700 ~/.ssh`
+
 `chmod 600 ~/.ssh/authorized_keys`
+
 `/usr/sbin/sshd`
+
 `exit`
 ## Do this on all 4 hosts
 
@@ -44,7 +54,9 @@ we can use our script now
 
 
 `cd src`
+
 `pip install paramiko`
+
 `python worm.py "<command to execute> <ip addresses of host seperated by spaces>`
 # example :
 `python worm.py "hostname" 172.19.0.4 172.19.0.2 172.19.0.3 172.19.0.1`
